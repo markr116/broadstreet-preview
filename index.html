@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broad Street Advisory | Chartered Accountants in Dunmurry &amp; Bangor</title>
+<meta name="description" content="Chartered accountants for businesses and individuals across Belfast, Lisburn and Bangor. Fixed fees agreed up front, plain-English advice, offices in Dunmurry and Bangor.">
+<!-- Preview build: keep out of search engines until the owner approves it. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #13231f;
+    --ink-soft: #4a5a55;
+    --paper: #f7f4ee;
+    --card: #ffffff;
+    --line: #e3ddd1;
+    --green: #1f4a3d;
+    --green-deep: #14332a;
+    --brass: #b8893b;
+    --brass-soft: #f1e6cf;
+    --radius: 14px;
+    --max: 1120px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.15; margin: 0 0 .5em; letter-spacing: -.01em; }
+  h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); }
+  h2 { font-size: clamp(1.75rem, 4.5vw, 2.5rem); }
+  h3 { font-size: 1.25rem; }
+  p { margin: 0 0 1em; }
+  a { color: var(--green); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  .eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin-bottom: .75em; }
+  .lede { font-size: 1.1rem; color: var(--ink-soft); max-width: 40em; }
+  section { padding: 64px 0; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 12px; top: 12px; background: #fff; padding: 8px 12px; z-index: 99; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 2px solid transparent; transition: transform .15s ease, background .15s ease; }
+  .btn:active { transform: scale(.98); }
+  .btn-primary { background: var(--brass); color: #1b1407; }
+  .btn-primary:hover { background: #c99a49; }
+  .btn-ghost { border-color: rgba(255,255,255,.5); color: #fff; }
+  .btn-ghost:hover { background: rgba(255,255,255,.1); }
+  .btn-dark { background: var(--green); color: #fff; }
+  .btn-dark:hover { background: var(--green-deep); }
+  .btn svg { width: 18px; height: 18px; }
+
+  /* Header */
+  header.site { position: sticky; top: 0; z-index: 20; background: rgba(247,244,238,.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .mark { width: 38px; height: 38px; border-radius: 10px; background: var(--green); color: var(--brass-soft); display: grid; place-items: center; font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 1.05rem; }
+  .brand b { display: block; font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 1.1rem; line-height: 1.1; }
+  .brand small { display: block; font-size: .72rem; color: var(--ink-soft); letter-spacing: .04em; }
+  nav.main { display: none; gap: 28px; align-items: center; }
+  nav.main a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .95rem; }
+  nav.main a:hover { color: var(--green); }
+  nav.main a.btn { color: #fff; }
+  .brand small { white-space: nowrap; }
+  @media (max-width: 420px) { .brand small .long { display: none; } }
+  .call-mini { white-space: nowrap; flex: none; display: inline-flex; align-items: center; gap: 6px; background: var(--green); color: #fff; text-decoration: none; font-weight: 600; font-size: .9rem; padding: 10px 16px; border-radius: 999px; }
+  .call-mini svg { width: 16px; height: 16px; }
+
+  /* Hero */
+  .hero { background: var(--green-deep); color: #fff; padding: 56px 0 64px; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; right: -120px; top: -120px; width: 420px; height: 420px; border-radius: 50%; border: 60px solid rgba(184,137,59,.12); }
+  .hero .eyebrow { color: #e3c487; }
+  .hero h1 { max-width: 14em; }
+  .hero h1 em { font-style: normal; color: #e3c487; }
+  .hero p.lede { color: rgba(255,255,255,.82); }
+  .hero-ctas { display: flex; flex-direction: column; gap: 12px; margin: 28px 0 32px; }
+  .proof { display: grid; grid-template-columns: 1fr; gap: 14px 20px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.15); font-size: .92rem; color: rgba(255,255,255,.85); position: relative; z-index: 1; }
+  .proof div { display: flex; gap: 8px; align-items: flex-start; }
+  .proof svg { flex: none; width: 18px; height: 18px; margin-top: 3px; color: #e3c487; }
+
+  /* Services */
+  .grid { display: grid; gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .card .icon { width: 44px; height: 44px; border-radius: 12px; background: var(--brass-soft); color: var(--green); display: grid; place-items: center; margin-bottom: 14px; }
+  .card .icon svg { width: 22px; height: 22px; }
+  .card p { color: var(--ink-soft); font-size: .97rem; }
+  .card ul { margin: 0; padding: 0; list-style: none; font-size: .93rem; }
+  .card li { padding: 6px 0 6px 20px; border-top: 1px dashed var(--line); position: relative; }
+  .card li::before { content: ""; position: absolute; left: 2px; top: 15px; width: 7px; height: 7px; border-radius: 50%; background: var(--brass); }
+  .note { font-size: .82rem; color: var(--ink-soft); margin-top: 10px; }
+
+  /* Promise band */
+  .promise { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .promise .grid > .step { padding: 4px 0 4px 60px; }
+  section { scroll-margin-top: 68px; }
+  .promise h3 { display: flex; gap: 10px; align-items: center; }
+  .promise h3 span { font-family: Inter, sans-serif; font-size: .8rem; color: var(--brass); font-weight: 600; }
+  .promise p { color: var(--ink-soft); }
+
+  /* Steps */
+  .steps { counter-reset: step; }
+  .step { position: relative; padding-left: 60px; }
+  .step::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0; width: 42px; height: 42px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; font-weight: 600; }
+
+  /* Start-up band */
+  .startup { background: var(--brass-soft); border-radius: 20px; padding: 32px 24px; display: grid; gap: 20px; }
+  .startup p { color: #4b3d22; }
+
+  /* Team */
+  .people { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
+  .person { display: flex; gap: 12px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+  .avatar { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--green); color: var(--brass-soft); display: grid; place-items: center; font-weight: 600; font-size: .9rem; }
+  .person b { display: block; font-size: .92rem; line-height: 1.25; }
+  .person small { color: var(--ink-soft); font-size: .8rem; }
+  .lead-people { display: grid; gap: 16px; }
+  .lead-people .card h3 { margin-bottom: .1em; }
+  .lead-people .role { color: var(--brass); font-weight: 600; font-size: .85rem; margin-bottom: .8em; }
+
+  /* Offices */
+  .offices { display: grid; gap: 16px; }
+  .office h3 { margin-bottom: .2em; }
+  .office address { font-style: normal; color: var(--ink-soft); margin-bottom: 14px; }
+  .hours { width: 100%; border-collapse: collapse; font-size: .93rem; margin-bottom: 16px; }
+  .hours td { padding: 7px 0; border-top: 1px solid var(--line); }
+  .hours td:last-child { text-align: right; color: var(--ink-soft); }
+
+  /* Contact */
+  .contact { background: var(--green-deep); color: #fff; }
+  .contact .lede { color: rgba(255,255,255,.8); }
+  .contact-grid { display: grid; gap: 28px; }
+  .quick { display: grid; gap: 12px; }
+  .quick a { display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 12px; padding: 16px; color: #fff; text-decoration: none; }
+  .quick a:hover { background: rgba(255,255,255,.12); }
+  .quick svg { width: 22px; height: 22px; color: #e3c487; flex: none; }
+  .quick b { display: block; }
+  .quick small { color: rgba(255,255,255,.7); }
+  form { background: #fff; color: var(--ink); border-radius: var(--radius); padding: 24px; display: grid; gap: 14px; }
+  label { font-size: .88rem; font-weight: 600; display: grid; gap: 6px; }
+  input, textarea, select { font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid #cfc8b9; border-radius: 10px; background: #fff; color: var(--ink); width: 100%; }
+  input:focus, textarea:focus, select:focus { outline: 3px solid rgba(184,137,59,.35); border-color: var(--brass); }
+  textarea { min-height: 110px; resize: vertical; }
+  form .small { font-size: .8rem; color: var(--ink-soft); }
+
+  footer { background: #0d1f1a; color: rgba(255,255,255,.7); font-size: .9rem; padding: 40px 0 96px; }
+  footer a { color: rgba(255,255,255,.85); }
+  .foot { display: grid; gap: 24px; }
+  .foot h4 { color: #fff; font-size: .95rem; margin: 0 0 8px; }
+  .foot ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 6px 12px; font-size: .82rem; color: #fff; }
+
+  /* Sticky phone action bar (mobile only) */
+  .actionbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.97); border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(0,0,0,.06); }
+  .actionbar .btn { min-height: 46px; font-size: .95rem; padding: 0 12px; }
+
+  @media (min-width: 720px) {
+    .hero-ctas { flex-direction: row; }
+    .proof { grid-template-columns: repeat(4, auto); justify-content: start; gap: 28px; }
+    .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .people { grid-template-columns: repeat(3, 1fr); }
+    .lead-people { grid-template-columns: 1fr 1fr; }
+    .offices { grid-template-columns: 1fr 1fr; }
+    .startup { grid-template-columns: 1.6fr 1fr; align-items: center; padding: 40px; }
+    .foot { grid-template-columns: 2fr 1fr 1fr 1fr; }
+  }
+  @media (min-width: 960px) {
+    body { font-size: 18px; }
+    section { padding: 96px 0; }
+    nav.main { display: flex; }
+    .call-mini { display: none; }
+    .hero { padding: 96px 0 88px; }
+    .people { grid-template-columns: repeat(4, 1fr); }
+    .contact-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+    .actionbar { display: none; }
+    footer { padding-bottom: 40px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Broad Street Advisory home">
+      <span class="mark" aria-hidden="true">BS</span>
+      <span><b>Broad Street Advisory</b><small>Chartered Accountants<span class="long"> · Dunmurry &amp; Bangor</span></small></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#how">How we work</a>
+      <a href="#team">Team</a>
+      <a href="#offices">Offices</a>
+      <a class="btn btn-dark" href="#contact" style="min-height:42px">Free consultation</a>
+    </nav>
+    <a class="call-mini" href="tel:+442890629259" aria-label="Call 028 9062 9259">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      Call us
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="eyebrow">Accountants for Belfast, Lisburn &amp; Bangor</div>
+      <h1>Clear advice that changes more than <em>your tax bill.</em></h1>
+      <p class="lede">We look after the accounts, tax and payroll for local businesses and individuals, in plain English and for a fixed fee you agree before we start.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#contact">Book a free consultation</a>
+        <a class="btn btn-ghost" href="tel:+442890629259">Call 028 9062 9259</a>
+      </div>
+      <div class="proof">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Chartered Accountants Ireland member firm</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Fixed fees, agreed up front</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>No jargon, ever</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Offices in Dunmurry &amp; Bangor</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="eyebrow">What we do</div>
+      <h2>Everything your business needs from an accountant</h2>
+      <p class="lede">From your first day trading to planning your retirement, one team handles it, so you only explain things once.</p>
+      <div class="grid cols-3" style="margin-top:32px">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+          <h3>Accounts &amp; compliance</h3>
+          <p>Your year-end paperwork done properly and on time, so Companies House and HMRC stay happy.</p>
+          <ul><li>Annual accounts and statutory audits</li><li>Company secretarial and statutory returns</li><li>Grant claims</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM4 9h16M9 4v16"/></svg></div>
+          <h3>Tax</h3>
+          <p>We work to keep your tax as low as the law allows, and explain every figure.</p>
+          <ul><li>Self Assessment and corporation tax</li><li>VAT returns, schemes and planning</li><li>Estate, trust and inheritance tax planning</li><li>Help with HMRC enquiries</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3h8v4M3 7h18v13H3zM3 13h18"/></svg></div>
+          <h3>Bookkeeping &amp; payroll</h3>
+          <p>Hand over the admin, or let us set you up to do it yourself with confidence.</p>
+          <ul><li>Bookkeeping at your premises or ours</li><li>Payroll, RTI and pension auto-enrolment</li><li>Monthly or quarterly management accounts</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+          <h3>Starting a business</h3>
+          <p>Get the foundations right from day one.</p>
+          <ul><li>Sole trader, partnership or limited company?</li><li>Registering with HMRC and Companies House</li><li>Business plans, cashflow and funding proposals</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div>
+          <h3>Growth &amp; advice</h3>
+          <p>Numbers you can actually make decisions with, and someone to talk them through.</p>
+          <ul><li>Business planning and forecasts</li><li>Systems and accounting software set-up</li><li>Support dealing with your bank</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Pensions &amp; protection</h3>
+          <p>We introduce you to a trusted independent financial adviser and work alongside them.</p>
+          <ul><li>Pensions and retirement planning</li><li>ISAs and investments</li><li>Life, critical illness and medical cover</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="promise" id="how">
+    <div class="wrap">
+      <div class="eyebrow">How we work</div>
+      <h2>No surprises, no jargon</h2>
+      <div class="grid cols-3 steps" style="margin-top:32px">
+        <div class="step">
+          <h3>Have a chat</h3>
+          <p>Tell us where you are and what's worrying you. The first conversation is free and there's no obligation.</p>
+        </div>
+        <div class="step">
+          <h3>Get a fixed fee</h3>
+          <p>We agree the work and the price with you before we start. You'll never be billed for something you didn't approve.</p>
+        </div>
+        <div class="step">
+          <h3>We take it from there</h3>
+          <p>Your dedicated team explains things plainly and keeps you ahead of every deadline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="startup">
+        <div>
+          <div class="eyebrow" style="color:#8a6420">Thinking of going it alone?</div>
+          <h2 style="margin-bottom:.4em">Bring us your business idea.</h2>
+          <p style="margin:0">We'll help you choose the right structure, get registered, build a cashflow forecast and talk to the bank, so you can get on with the work you started the business to do.</p>
+        </div>
+        <div><a class="btn btn-dark" href="#contact" style="width:100%">Talk to us about starting up</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" style="padding-top:16px">
+    <div class="wrap">
+      <div class="eyebrow">Who you'll deal with</div>
+      <h2>Experienced, approachable people</h2>
+      <p class="lede">Broad Street Advisory was founded in 2020 to bring affordable, first-class accountancy to Belfast, Lisburn and Bangor.</p>
+      <div class="lead-people" style="margin-top:28px">
+        <article class="card">
+          <h3>Tony McAleenan</h3>
+          <div class="role">Principal · Chartered Accountant</div>
+          <p style="margin:0">Over 15 years as a Chartered Accountant. Tony trained in practice, then worked as a Finance Director and Managing Director before founding the firm. He leads our accounting, tax, strategy and business planning work.</p>
+        </article>
+        <article class="card">
+          <h3>David Daly</h3>
+          <div class="role">Director</div>
+          <p style="margin:0">13 years in accounting across practice and industry, after several years in banking, so he knows what lenders want to see.</p>
+        </article>
+      </div>
+      <div class="people">
+        <div class="person"><span class="avatar">LD</span><span><b>Laura Daly</b><small>Senior Accountant</small></span></div>
+        <div class="person"><span class="avatar">CC</span><span><b>Caoimhe Cooke</b><small>Associate Accountant</small></span></div>
+        <div class="person"><span class="avatar">AR</span><span><b>Annette Rogan</b><small>Associate Accountant</small></span></div>
+        <div class="person"><span class="avatar">SD</span><span><b>Shirley Durno</b><small>Client Manager</small></span></div>
+        <div class="person"><span class="avatar">PD</span><span><b>Philip Derbyshire</b><small>Broad Street team</small></span></div>
+        <div class="person"><span class="avatar">AM</span><span><b>Adam McKibbin</b><small>Trainee Accountant</small></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="offices" style="padding-top:0">
+    <div class="wrap">
+      <div class="eyebrow">Find us</div>
+      <h2>Two offices, one team</h2>
+      <div class="offices" style="margin-top:28px">
+        <article class="card office">
+          <h3>Dunmurry, Belfast</h3>
+          <address>153 Kingsway, Dunmurry, Belfast BT17 9RY</address>
+          <table class="hours" aria-label="Dunmurry opening hours">
+            <tr><td>Monday to Thursday</td><td>9:00am to 5:30pm</td></tr>
+            <tr><td>Friday</td><td>9:00am to 2:00pm</td></tr>
+            <tr><td>Weekends</td><td>Closed</td></tr>
+          </table>
+          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=153+Kingsway+Dunmurry+Belfast+BT17+9RY" target="_blank" rel="noopener">Get directions</a>
+        </article>
+        <article class="card office">
+          <h3>Bangor</h3>
+          <address>94 Hamilton Road, Bangor, Co. Down BT20 4LG</address>
+          <table class="hours" aria-label="Bangor opening hours">
+            <tr><td>Monday and Tuesday</td><td>9:00am to 5:00pm</td></tr>
+            <tr><td>Wednesday and Thursday</td><td>By appointment</td></tr>
+            <tr><td>Friday to Sunday</td><td>Closed</td></tr>
+          </table>
+          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=94+Hamilton+Road+Bangor+BT20+4LG" target="_blank" rel="noopener">Get directions</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="eyebrow" style="color:#e3c487">Get in touch</div>
+        <h2>Book your free consultation</h2>
+        <p class="lede">Tell us a little about you and we'll call you back to talk it through and give you a fixed quote.</p>
+        <div class="quick" style="margin-top:24px">
+          <a href="tel:+442890629259">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span><b>028 9062 9259</b><small>Call the office</small></span>
+          </a>
+          <a href="https://wa.me/447727829616" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            <span><b>Message us on WhatsApp</b><small>07727 829616</small></span>
+          </a>
+        </div>
+      </div>
+      <form action="#" method="post" onsubmit="event.preventDefault(); this.innerHTML='<h3>Thanks, we\'ll be in touch.</h3><p class=small>This is a preview, so nothing was sent.</p>';">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+        <label>What can we help with?
+          <select name="topic">
+            <option>Accounts and tax</option>
+            <option>Bookkeeping or payroll</option>
+            <option>Starting a business</option>
+            <option>Self Assessment</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Anything else we should know?<textarea name="message"></textarea></label>
+        <button class="btn btn-primary" type="submit">Request a call back</button>
+        <p class="small" style="margin:0">We'll only use your details to reply to you. See our <a href="https://www.broadstreetadvisory.co/privacy">privacy notice</a>.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top" style="color:#fff"><span class="mark" aria-hidden="true">BS</span><span><b>Broad Street Advisory</b><small style="color:rgba(255,255,255,.6)">Chartered Accountants</small></span></a>
+      <p style="margin-top:16px">Accountants in Dunmurry &amp; Bangor, serving Belfast, Lisburn and North Down.</p>
+      <span class="badge">Member firm · Chartered Accountants Ireland</span>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul><li><a href="#services">Accounts &amp; tax</a></li><li><a href="#services">Bookkeeping &amp; payroll</a></li><li><a href="#services">Starting up</a></li></ul>
+    </div>
+    <div>
+      <h4>Useful</h4>
+      <ul><li><a href="https://www.broadstreetadvisory.co/resources/tax-calendar">Tax calendar</a></li><li><a href="https://www.broadstreetadvisory.co/resources/tax-rates-and-allowances">Tax rates</a></li><li><a href="https://www.broadstreetadvisory.co/factsheets">Factsheets</a></li></ul>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <ul><li><a href="https://www.facebook.com/BroadStreetAdvisory">Facebook</a></li><li><a href="https://www.linkedin.com/company/broad-street-advisory/">LinkedIn</a></li><li><a href="https://x.com/streetadvisory">X</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:28px;font-size:.8rem;color:rgba(255,255,255,.5)">© Broad Street Advisory · <a href="https://www.broadstreetadvisory.co/privacy">Privacy</a> · <a href="https://www.broadstreetadvisory.co/disclaimer">Disclaimer</a></div>
+</footer>
+
+<div class="actionbar" aria-label="Quick contact">
+  <a class="btn btn-dark" href="tel:+442890629259">Call now</a>
+  <a class="btn btn-primary" href="#contact">Free consultation</a>
+</div>
+</body>
+</html>
